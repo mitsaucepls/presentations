@@ -52,24 +52,14 @@ hideInToc: true
 
 <Toc minDepth="1" maxDepth="2" :listStyle="['upper-alpha', 'lower-alpha']"></Toc>
 
-<style>
-h1 {
-  background-color: #2B90B6;
-  background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
-</style>
-
 ---
 transition: slide-up
 ---
 
 # Plastikmüll in Deutschland
 <img src="./kunststoffabfaelle-2021.jpeg" alt="heh" width="75%" height="75%" class="center">
+
+<!-- 60% aus Verpackungen -->
 
 <style>
 .center {
@@ -134,9 +124,20 @@ transition: slide-up
   <template #1>
     <div class="vertical-center">
       <ul>
-        <li><strong>Existiert seit</strong>: 90er Jahren.</li>
-        <li><strong>Verwertung</strong>: 5,67t also 99,4% davon werden Verwertet.</li> % 99,4 stimmt nicht mit der Graphik davor ueberein aber so sagt es das UBA
+        <h2>Verwertung</h2>
+        <li>5,67t also 99,4% davon werden Verwertet. <!-- % 99,4 stimmt nicht mit der Graphik davor ueberein aber so sagt es das UBA -->
+          <ul>
+            <li>64,4% thermische Verwertung.</li>
+            <li>21,5% Herstellung von Kunststoffgranulat.</li>
+            <li>13,1% export ins Ausland. (745.100t)</li>
+            <li>0,4% echtes Recycling.</li>
+          </ul>
+        </li>
       </ul>
+      <br>
+```
+🔍 Der grüne Punkt existiert seit den 90er Jahren.
+```
     </div>
     <Footer />
   </template>
@@ -162,5 +163,195 @@ transition: slide-up
   margin-left: auto;
   margin-right: auto;
   width: 75%;
+}
+</style>
+
+---
+transition: slide-up
+---
+
+# Müllexport
+Aber auch illegal?
+
+<div class="grid grid-cols-[50%_50%] gap-4">
+  <div>
+    <div style="height: 100%; margin-top: 0">
+      <div>
+        <p><strong>Deutschland ist EU-weit größter Exporteur von Kunststoffabfällen</strong></p>
+        <ul>
+          <li>Exporte an offizielle Stellen gelten als verwertet</li>
+        </ul>
+        <p><strong>Seit 2021 gelten neue Exportbedingungen</strong></p>
+        <ul>
+          <li>Nur sortierte, unverschmutzte und recycelbare Plastik darf exportiert werden</li>
+        </ul>
+        <p>Die Folge sind zahlreiche illegale Exporte</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img src="./ship-trash.png" alt="heh" width="100%" height="100%" class="center">
+  </div>
+</div>
+
+<Footer />
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+p {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+</style>
+
+---
+
+# Aktuell wichtige Exportländer
+Stand 2021
+
+<table>
+  <thead>
+    <tr>
+      <th>Niederlande</th>
+      <th>Türkei</th>
+      <th>Malaysia</th>
+      <th>Polen</th>
+      <th>Indonesien, Indien und Vietnam</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rotterdam als Umschlagplatz für Plastikmüll</td>
+      <td>Probleme mit illegalen oder unsachgemäße Entsorgung</td>
+      <td>Unsachgemäße Entsorgung, illegale Deponien, Müllverbrennung</td>
+      <td>Bedenken über illegale Entsorgung, insbesondere auf Deponien</td>
+      <td>Berichte über Umweltverschmutzung, illegale Deponien, mangelnde Müllkontrolle</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-left: 2px solid;
+}
+
+th {
+  width: 20%;
+  border-top: 2px solid;
+  border-right: 2px solid;
+  text-align: center;
+}
+
+td {
+  width: 20%;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  text-align: center;
+}
+</style>
+
+<Footer />
+
+---
+
+# Auswirkungen
+
+<div class="grid grid-cols-[50%_50%] gap-4">
+  <div>
+    <div style="height: 100%; margin-top: 0">
+      <div>
+        <h2>Umwelt</h2>
+        <ul>
+          <li>Böden und Gewässer verseucht</li>
+          <li>Allgemein Verschmutzung des Lebensraums</li>
+          <li>Schlechte Arbeitsbedingungen</li>
+        </ul>
+        <h2 style='margin-top: 1rem'>Gesundheit</h2>
+        <ul>
+          <li>Atemwegserkrankungen</li>
+          <li>Krebs</li>
+          <li>Herz-Kreislauf-Erkrankungen</li>
+          <li>Schädigung des Nervensystems</li>
+          <li>Entwicklungshemmungen bei Kindern</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div>
+    <img src="./verbrennung.png" alt="heh" width="100%" height="100%" class="center">
+  </div>
+</div>
+
+<Footer />
+
+---
+
+# Zusammenfassung
+
+<h2>1. Plastikmüllproblem – Verlagerung ins Ausland</h2>
+<ul>
+  <li><span class="highlight">13,1% des Plastikmülls</span> wird in andere Länder exportiert.</li>
+</ul>
+<h2>2. Export in Länder mit schlechter Entsorgungsinfrastruktur</h2>
+<ul>
+  <li>Abfallexporte in Länder mit <span class="highlight">schwachen Entsorgungssystemen</span> verschärfen das Problem.</li>
+</ul>
+<h2>3. Unzureichende Exportvorschriften</h2>
+<ul>
+  <li><span class="highlight">Schwachstellen</span> in den aktuellen Vorschriften führen zu <span class="highlight">illegalem Plastikmülltransport</span>.</li>
+</ul>
+<Footer />
+
+---
+
+# Fazit
+<v-switch class="midl">
+  <template #0>
+    <h2>Was wäre „gerecht“?</h2>
+    <ul>
+      <li>Kein Export des Abfalls in andere Länder</li>
+      <li>Plastikmüll als Rohstoff ansehen und konsequent recyceln bzw. wiederverwenden</li>
+    </ul>
+  </template>
+  <template #1>
+    <h2>Was wäre „gerecht“?</h2>
+    <ul>
+      <li>Kein Export des Abfalls in andere Länder</li>
+      <li>Plastikmüll als Rohstoff ansehen und konsequent recyceln bzw. wiederverwenden</li>
+    </ul>
+      <div class="important">
+        <span style="color: red;">T</span>
+        <span style="color: orange;">h</span>
+        <span style="color: yellow;">a</span>
+        <span style="color: green;">n</span>
+        <span style="color: blue;">k</span>
+        <span style="color: indigo;">s</span>
+        <span style="color: violet;">!</span>
+      </div>
+  </template>
+</v-switch>
+
+<Footer />
+
+<style>
+.midl {
+  height: 70%;
+  position: relative;
+}
+.important {
+  text-align: center;
+  width: 100%;
+  font-size: 8vw;
+  margin: 0;
+  postition: relative;
 }
 </style>
