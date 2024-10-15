@@ -22,7 +22,7 @@ overviewSnapshots: true
 hideInToc: true
 ---
 
-<h1>Müllrecycling in Deutschland<br>auf Kosten anderer Länder?</h1>
+<h1>Müllrecycling in Deutschland<br>auf Kosten anderer Länder?<br>Am Beispiel Plastikmüll</h1>
 
 #### Von Markus Siegert
 
@@ -38,9 +38,11 @@ h4 {
 }
 </style>
 
-
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Hallo Leute! Grr 'Leute' ich weiss kleiner Spass als Einleitung zu einem eher
+Duesteren Thema
+
+Kein interkultureller Zusammenhalt, sondern schlechte Abhaengigkeiten zwischen den Laendern.
 -->
 
 ---
@@ -50,7 +52,15 @@ hideInToc: true
 
 # Gliederung
 
-<Toc minDepth="1" maxDepth="2" :listStyle="['upper-alpha', 'lower-alpha']"></Toc>
+<Toc minDepth="1" maxDepth="2"></Toc>
+
+<!--
+Als erstes wie mit dem Plastikmuell in Deutschland umgegangen wird.
+
+Was recycling wirklich bedeutet.
+
+und danach wie es die anderen Laender betrifft.
+-->
 
 ---
 transition: slide-up
@@ -110,7 +120,16 @@ transition: slide-up
 <!--   src="https://sli.dev/assets/arrow-bottom-left.svg" -->
 <!--   alt="" -->
 <!-- /> -->
-<!-- <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p> -->
+
+<!--
+Die Grafik erklaeren
+
+Links Pie Chart
+
+Rechts Person von den Gesamten Kunststoffabfaellen.
+
+Es wurde mit ca. 85 mio Einwohnern gerechnet.
+-->
 
 ---
 transition: slide-up
@@ -125,18 +144,18 @@ transition: slide-up
     <div class="vertical-center">
       <ul>
         <h2>Verwertung</h2>
-        <li>5,67t also 99,4% davon werden Verwertet. <!-- % 99,4 stimmt nicht mit der Graphik davor ueberein aber so sagt es das UBA -->
+        <li>5,67 Mio. t davon 99,4%, ca. 5,63 Mio. t werden Verwertet.
           <ul>
-            <li>64,4% thermische Verwertung.</li>
-            <li>21,5% Herstellung von Kunststoffgranulat.</li>
-            <li>13,1% export ins Ausland. (745.100t)</li>
-            <li>0,4% echtes Recycling.</li>
+            <li>64,4% thermische Verwertung, ca. 3,651 Mio. t</li>
+            <li>21,5% Herstellung von Kunststoffgranulat, ca. 1,219 Mio. t</li>
+            <li>13,1% export ins Ausland, ca. 0,745 Mio. t</li>
+            <li>0,4% echtes Recycling, ca. 22.680 t</li>
           </ul>
         </li>
       </ul>
       <br>
 ```
-🔍 Der grüne Punkt existiert seit den 90er Jahren.
+🔍 77,5% das sind ca. 4.421 Tonnen können nicht im Inland recycled werden.
 ```
     </div>
     <Footer />
@@ -166,6 +185,158 @@ transition: slide-up
 }
 </style>
 
+<!--
+Doch halt! Es gibt einen Retter in der Not. Der gruene Punkt.
+
+Er verspricht, dass Verpackungen von Firmen die diesen erworben haben:
+
+Abgeholt,
+
+Sortiert,
+
+und Verwertet werden.
+
+Mit dem Geld welches zum erworb gezahlt wurde... Ja
+
+Er existiert seit den 1990er Jahren und es ist fuer Firmen die Verpackungen verkaufen bzw. verschicken verpflichtend eine solche Lizenz zu erwerben. Es muss jedoch nicht der gruene Punkt sein.
+
+Und wie sieht diese Verwertung aus?
+-->
+
+---
+transition: slide-up
+---
+
+# Thermische Verwertung
+<div class="grid grid-cols-[45%_10%_45%] gap-4" style="height: 60%">
+  <!-- First column -->
+  <div class="vertical-center">
+    <div>
+      <div>
+        <p><strong>Aussortiertes Plastik</strong></p>
+        <ul>
+          <li>Zu verschmutztes Plastik wird aussortiert und zur Aufbereitung als Ersatzbrennstoff weitergeleitet.</li>
+          <li>Müllaufbereiter zahlen für die Verbrennung.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Second column -->
+  <div class="arrow-container">
+    🡒
+  </div>
+  <!-- Third column -->
+  <div class="vertical-center">
+    <div>
+      <div>
+        <p><strong>CO<sub>2</sub>-Ausstoß und Nutzung</strong></p>
+        <ul>
+          <li>Hohe CO<sub>2</sub>-Emissionen trotz Müllreduktion.</li>
+          <li>Einsatz in Zementproduktion und Fernwärme.</li>
+          <li>Zementindustrie: 3-fach höhere THG als Flugverkehr.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Footer />
+
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+p {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 5rem;
+}
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+</style>
+
+<!--
+Aussortiertes Plastik
+
+Also zu verschmutzt oder zu oft schon recycled
+
+wird zuerst aufbereitet und dann mit gewissem entgelt als Ersatzbrennstoff weitergeleitet.
+
+Aber nicht der Verheizende zahlt, neee. Der Muellaufbereiter zahlt damit der mindere Ersatzbrennstoff ueberhaupt in Betracht gezogen wird verbrannt zu werden.
+
+Das muss man sich erstmal auf der Zunge zergehen lassen.
+
+Unmittelbare Folgen
+
+
+Thermische Verwertung ist nicht die einzige Option fuer unsauberes Mischplastik DOWNCYCLING
+
+Helmut Maurer
+Ein Typ aus der EU hat zu dem Thema auch mal gesagt: Es ist beaengstigend, dass es keine entscheidene Loesungsansaetze gibt um dem Verpackungsproblem Herr zu werden.
+-->
+
+---
+transition: slide-up
+---
+
+# Herstellung von Kunststoffgranulat
+<div class="grid grid-cols-[50%_50%] gap-4" style="height: 75%">
+  <div>
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/PMCOQO_5Ecw?mute=1&loop=1&playlist=PMCOQO_5Ecw&controls=0&modestbranding=1&rel=0" frameborder="0" allow="encrypted-media" allowfullscreen class="vertical-center"></iframe>
+  </div>
+  <div class="vertical-center">
+    <div>
+      <div>
+        <p><strong>Herstellung von Kunststoffgranulat</strong></p>
+        <ul>
+          <li>Verarbeitung zu Granulat zum herstellen neuer Kunststofferzeugnisse</li>
+        </ul>
+        <p><strong>Nachteile der Kunststoffgranulat-Herstellung</strong></p>
+        <ul>
+          <li>Energieintensiver und teurer Prozess</li>
+          <li>Nicht einsetzbar in z.B. Lebensmittelindustrie</li>
+          <li>Nur begrenzt oft wiederholbar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<Footer />
+
+<style>
+p {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+}
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+</style>
+
+<!--
+Ausgewaehlte Kunststoffabfaelle werden zu Granulat verarbeitet, womit neue Kunststofferzeugnisse hergestellt werden koennen.
+
+Kleines Video vom gruenen Punkt
+
+Nachteile
+-->
+
 ---
 transition: slide-up
 ---
@@ -183,7 +354,7 @@ Aber auch illegal?
         </ul>
         <p><strong>Seit 2021 gelten neue Exportbedingungen</strong></p>
         <ul>
-          <li>Nur sortierte, unverschmutzte und recycelbare Plastik darf exportiert werden</li>
+          <li>Nur sortierte, unverschmutzter und recycelbarer Plastikmüll darf exportiert werden</li>
         </ul>
         <p>Die Folge sind zahlreiche illegale Exporte</p>
       </div>
@@ -207,6 +378,24 @@ p {
   margin-bottom: 0rem;
 }
 </style>
+
+<!--
+Kommen wir zu meinem persoehnlichen Highlight, dem Muellexport.
+
+Noch billiger als Verbrennung oder Downcycling ist der export das delegieren von Verantwortung ins Ausland. Das ist so peinlich.
+
+Und Deutschland ist ganz vorne mit dabei.
+
+Exporte nur an offizielle Stellen -> Folge kann sein
+
+Entsorgung mit, im Vergleich, schlechterer Technologie als es Deutschland haette machen koennen.
+
+Neue Exportbedingungen kein Mischplastik mehr
+
+Trickreich vorne legaler Plastikmuell hinten illegal, sodass Kontrolle schwer 80 20 Pareto ueberall.
+
+Und wer soll das alles kontrollieren, machen wir uns mal nichts vor.
+-->
 
 ---
 
@@ -261,6 +450,16 @@ td {
 
 <Footer />
 
+<!--
+Eine Tabelle von 2021
+
+Bis 2018 hat China das Problem geloest. Danach wurde sich schnell das naechste Opfer gesucht. Malaysia
+
+Und ab 2021 mit den neuen Gesetzen wurde es schwerer.
+
+Es gab nicht mehr DEN Abnehmer
+-->
+
 ---
 
 # Auswirkungen
@@ -293,6 +492,13 @@ td {
 
 <Footer />
 
+<!--
+Keine guten Arbeitsbedungen.
+In Entwicklungslaendern und dann noch auf einer Muellhalde.
+
+Rechts ist ein Bild mit Erdnuessen und nicht Earthnutz, dass heisst es ist Deutscher Muell und freiem Himmel in der Tuerkei illegal verbrannt.
+-->
+
 ---
 
 # Zusammenfassung
@@ -310,6 +516,14 @@ td {
   <li><span class="highlight">Schwachstellen</span> in den aktuellen Vorschriften führen zu <span class="highlight">illegalem Plastikmülltransport</span>.</li>
 </ul>
 <Footer />
+
+<!--
+Delegation der Verantwortung. 13,1% direkt und 64,4% indirekt
+
+Selbst bei legalem Umgang schlechtere Entsorgungsinfrastruktur
+
+Aber es geht auch illegal
+-->
 
 ---
 
@@ -355,3 +569,34 @@ td {
   postition: relative;
 }
 </style>
+
+<!--
+Was waere gerecht? Nicht wie ist es realistisch.
+-->
+
+---
+
+# Quellen
+
+- https://github.com/slidevjs/slidev
+- https://www.facebook.com/photo.php?fbid=1211314168913404&id=280433842001446&set=a.282604165117747
+- https://www.nabu.de/umwelt-und-ressourcen/abfall-und-recycling/22033.html
+- https://canvasdesu.com/
+- https://images.news18.com/ibnlive/uploads/2013/04/ironman3-apr26.jpg?im=FitAndFill=(1200,675)
+- https://www.gruener-punkt.de/fileadmin/_processed_/9/4/csm_2015_DER_GRUENE_PUNKT_CMYK_a8dcf23052.png
+- https://www.destatis.de/DE/Presse/Pressemitteilungen/Zahl-der-Woche/2023/PD23_23_p002.html
+- https://www.umweltbundesamt.de/daten/ressourcen-abfall/verwertung-entsorgung-ausgewaehlter-abfallarten/kunststoffabfaelle
+- https://youtu.be/PMCOQO_5Ecw?si=vdxviONHMVfl9MR5
+
+---
+hideInToc: true
+---
+
+# Quellen
+
+- https://static.nationalgeographic.de/files/styles/image_3200/public/microsoftteams-image_0.png.webp?w=1600&h=1067&q=100
+- https://www.ardmediathek.de/video/ndr-dokfilm/plastik-die-recycling-luege/ndr/Y3JpZDovL25kci5kZS80NjMyXzIwMjItMTAtMTktMDAtMDA
+- https://en.wikipedia.org/wiki/Green_Dot_(symbol)
+- https://chatgpt.com/
+- https://www.nabu.de/umwelt-und-ressourcen/abfall-und-recycling/26205.html
+- https://www.greenpeace.de/engagieren/nachhaltiger-leben/plastikmuellexporte-deutschland
