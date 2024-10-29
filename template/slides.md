@@ -11,22 +11,22 @@ transition: slide-left
 mdc: true
 overviewSnapshots: true
 hideInToc: true
-src: ./pages/header0.md
+src: ./pages/0header.md
 ---
 
 ---
 hideInToc: true
-src: ./pages/toc1.md
+src: ./pages/1toc.md
 ---
 
 ---
-src: ./pages/youtube-right-text-left2.md
+src: ./pages/2youtube-right-text-left.md
 ---
 
 ---
-src: ./pages/text-right-image-left3.md
+src: ./pages/3text-right-image-left.md
 ---
 
 ---
-src: ./pages/endcard4.md
+src: ./pages/4endcard.md
 ---
