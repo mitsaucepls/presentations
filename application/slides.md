@@ -38,3 +38,7 @@ src: ./pages/5radarchart.md
 ---
 src: ./pages/6softskillschart.md
 ---
+
+---
+src: ./pages/7timeline.md
+---
