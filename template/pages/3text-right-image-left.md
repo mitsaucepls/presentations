@@ -18,7 +18,7 @@ Aber auch illegal?
     </div>
   </div>
   <div>
-    <img src="./ship-trash.png" alt="heh" width="100%" height="100%" class="center">
+    <img src="../public/dev-ops.png" alt="heh" width="100%" height="100%" class="center">
   </div>
 </div>
 
