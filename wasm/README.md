@@ -9,3 +9,21 @@ To start the slide show:
 Edit the [slides.md](./slides.md) to see the changes.
 
 Learn more about Slidev at the [documentation](https://sli.dev/).
+
+Bevy workflow:
+```rust
+App::new()
+    .add_plugins(DefaultPlugins.set(WindowPlugin {
+        primary_window: Some(Window {
+            fit_canvas_to_parent: true,
+            canvas: Some("#game-canvas".into()), //references the id of the canvas element
+            ..default()
+        }),
+        ..default()
+    }))
+    //...
+    .run();
+```
+```
+TODO
+```

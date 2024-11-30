@@ -23,6 +23,10 @@ src: ./pages/test.md
 ---
 
 ---
+src: ./pages/test2.md
+---
+
+---
 src: ./pages/1-5timeline.md
 ---
 

@@ -7,3 +7,6 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
+body {
+  margin: 0px;
+}
