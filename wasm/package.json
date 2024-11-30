@@ -1,0 +1,24 @@
+{
+  "name": "trash-presentation",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export",
+    "start": "http-server dist -p 8080 -c-1 --proxy 'http://localhost:8080?'"
+  },
+  "dependencies": {
+    "@slidev/cli": "^0.50.0-beta.3",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest",
+    "chart.js": "^4.4.6",
+    "vue": "^3.5.11",
+    "vue-chartjs": "^5.3.2",
+    "vuetify": "^3.7.3"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "playwright-chromium": "^1.48.0"
+  }
+}
