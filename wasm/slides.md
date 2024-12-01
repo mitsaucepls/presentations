@@ -31,6 +31,10 @@ src: ./pages/architecture.md
 ---
 
 ---
+src: ./pages/wasmgrid.md
+---
+
+---
 src: ./pages/1-5timeline.md
 ---
 
