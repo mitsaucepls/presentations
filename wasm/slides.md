@@ -27,6 +27,10 @@ src: ./pages/test2.md
 ---
 
 ---
+src: ./pages/architecture.md
+---
+
+---
 src: ./pages/1-5timeline.md
 ---
 
