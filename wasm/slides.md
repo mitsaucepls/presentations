@@ -27,6 +27,10 @@ src: ./pages/test2.md
 ---
 
 ---
+src: ./pages/test3.md
+---
+
+---
 src: ./pages/architecture.md
 ---
 
