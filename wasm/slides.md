@@ -19,15 +19,15 @@ src: ./pages/1toc.md
 ---
 
 ---
-src: ./pages/test.md
+src: ./pages/game.md
 ---
 
 ---
-src: ./pages/test2.md
+src: ./pages/waifu.md
 ---
 
 ---
-src: ./pages/test3.md
+src: ./pages/washedup.md
 ---
 
 ---

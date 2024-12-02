@@ -24,6 +24,14 @@ App::new()
     //...
     .run();
 ```
+```bash
+cargo build --release --example animated_transform --target wasm32-unknown-unknown
 ```
-TODO
+```bash
+wasm-bindgen --out-name animated_transform --out-dir ../components/target/ --target web target/wasm32-unknown-unknown/release/examples/animated_transform.wasm
+```
+
+washed up workflow:
+```bash
+wash up
 ```
