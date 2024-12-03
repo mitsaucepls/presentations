@@ -47,5 +47,9 @@ src: ./pages/washedup.md
 ---
 
 ---
+src: ./pages/interactive.md
+---
+
+---
 src: ./pages/7endcard.md
 ---

@@ -6,19 +6,12 @@ metadata:
   annotations:
     description: |
       Task manager which is accessed via HTTP, enabling storage, leasing and completion of jobs
-    wasmcloud.dev/authors: wasmCloud team
-    wasmcloud.dev/source-url: https://github.com/wasmCloud/wasmCloud/blob/main/examples/rust/components/http-task-manager/wadm.yaml
-    wasmcloud.dev/readme-md-url: https://github.com/wasmCloud/wasmCloud/blob/main/examples/rust/components/http-task-manager/README.md
-    wasmcloud.dev/homepage: https://github.com/wasmCloud/wasmCloud/tree/main/examples/rust/components/http-task-manager
-    wasmcloud.dev/categories: |
-      http,http-server,rust,task-manager,example
 spec:
   components:
     - name: http-task-mgr
       type: component
       properties:
-        # To use the locally compiled version of this compnent, see local.wadm.yaml
-        image: ghcr.io/wasmcloud/components/http-task-manager-rust:0.1.0
+        image: file://./build/http_task_manager.wasm
       traits:
         # Govern the spread/scheduling of the component
         - type: spreadscaler

@@ -8,7 +8,7 @@
           <img src="/wasm_backend_service_architecture_white.png" alt="heh" class="absolute h-full w-full object-contain"/>
         </template>
         <template #light>
-          <img src="/wasm_backend_service_architecture_black.png" alt="heh" class="absolute h-full w-full object-center object-contain"/>
+          <img src="/wasm_backend_service_architecture_black.png" alt="heh" class="absolute h-full w-full object-contain"/>
         </template>
       </LightOrDark>
     </div>

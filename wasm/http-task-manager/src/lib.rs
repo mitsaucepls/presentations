@@ -141,7 +141,7 @@ impl incoming_handler::Guest for HttpTaskManager {
             // GET /api/v1/tasks/random
             //
             // Post a random task into the database
-            (Method::Get, "/api/v1/tasks/random") => {
+            (Method::Get, "/random") => {
                 let tasks = vec![
                     "write", "read", "code", "debug", "test", "deploy",
                     "design", "analyze", "research", "organize", "clean",
