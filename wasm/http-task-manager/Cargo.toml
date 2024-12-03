@@ -16,6 +16,7 @@ anyhow = { workspace = true, features = [ "std" ] }
 bytes = { workspace = true, features = [ "default", "serde" ] }
 chrono = { workspace = true }
 include_dir = {workspace = true, features = [ "glob" ] }
+rand = "0.8.5"
 serde = { workspace = true, features = [ "std", "derive", "alloc" ] }
 serde_json = { workspace = true, features = [ "std" ] }
 wit-bindgen = { workspace = true, features = [ "default" ] }

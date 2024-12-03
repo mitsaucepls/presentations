@@ -581,6 +581,7 @@ dependencies = [
  "chrono",
  "include_dir",
  "merkle_hash",
+ "rand",
  "reqwest",
  "serde",
  "serde_json",
