@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: backgroundpingu.jpg
+background: real-penger.jpg
 # title: Some random title
 # info: |
 #  Idk bro
@@ -19,15 +19,19 @@ src: ./pages/1toc.md
 ---
 
 ---
+src: ./pages/whatsm.md
+---
+
+---
 src: ./pages/game.md
 ---
 
 ---
-src: ./pages/waifu.md
+src: ./pages/bestpratices.md
 ---
 
 ---
-src: ./pages/washedup.md
+src: ./pages/wasmhistory.md
 ---
 
 ---
@@ -39,27 +43,7 @@ src: ./pages/wasmgrid.md
 ---
 
 ---
-src: ./pages/1-5timeline.md
----
-
----
-src: ./pages/4position.md
----
-
----
-src: ./pages/2hardskills.md
----
-
----
-src: ./pages/3-5example-projects.md
----
-
----
-src: ./pages/3-6example-projects2.md
----
-
----
-src: ./pages/4softskills.md
+src: ./pages/washedup.md
 ---
 
 ---

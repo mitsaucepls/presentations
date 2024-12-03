@@ -1,9 +1,6 @@
----
-hideInToc: true
----
 <div class="h-full flex flex-col">
 
-  # Environment
+# Environment
   <div class="flex flex-1 flex-col mb-14">
     <div class="grid grid-rows-[50%_50%] gap-4 h-full">
       <!-- First Row -->
@@ -59,13 +56,8 @@ hideInToc: true
 <Footer />
 
 <style>
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 p {
-  margin-top: 1rem;
+  margin-top: 0rem;
   margin-bottom: 0rem;
 }
 </style>

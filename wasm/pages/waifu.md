@@ -1,3 +1,5 @@
 # waifu
 
 <Waifu />
+
+<Footer />

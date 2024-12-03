@@ -1,4 +1,4 @@
-<h1>WebAssembly<br>ist cool</h1>
+<h1>WebAssembly<br>is cool</h1>
 
 #### By Markus Siegert
 

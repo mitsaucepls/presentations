@@ -3,9 +3,12 @@ from diagrams.gcp.api import Endpoints
 from diagrams.azure.compute import OsImages
 from diagrams.aws.general import Users
 from diagrams.aws.management import SystemsManagerAutomation
+from diagrams.onprem import security
 from diagrams.onprem.compute import Server
 from diagrams.programming.language import Rust
 from diagrams.onprem.container import Docker
+from diagrams.onprem.database import Postgresql
+from diagrams.onprem.security import Vault
 from diagrams.custom import Custom
 
 wasm_binary_icon = "./WebAssembly_Logo.png"
@@ -27,16 +30,16 @@ with Diagram("Wasm Backend Service Architecture", show=False, graph_attr=graph_a
 
     with Cluster("Runtime Environment", graph_attr=graph_attr_cluster):
         runtime = Server("Wasm Runtime")
-        wasi = OsImages("WASI (Optional)")
+        runtime - [Docker("Containerization")]
 
-    with Cluster("Hosting Infrastructure", graph_attr=graph_attr_cluster):
-        api_service = Endpoints("API/Service Layer")
-        container = Docker("Container")
+    with Cluster("Capabilities (WASI and more)", graph_attr=graph_attr_cluster):
+        postgres = Postgresql("PostgreSQL")
+        api_service = Endpoints("HTTP")
+        secrets = Vault("Secrets")
 
-    client = Users("Client Application", fontcolor="white")
 
     # Connections
     ide >> compiler >> wasm_binary >> runtime
-    runtime >> wasi
-    runtime >> api_service >> container
-    container >> client
+    runtime >> api_service
+    api_service - postgres
+    api_service - secrets
