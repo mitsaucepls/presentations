@@ -23,15 +23,23 @@ src: ./pages/whatsm.md
 ---
 
 ---
+src: ./pages/wonderous.md
+---
+
+---
 src: ./pages/game.md
 ---
 
 ---
-src: ./pages/bestpratices.md
+src: ./pages/game-explain.md
 ---
 
 ---
 src: ./pages/wasmhistory.md
+---
+
+---
+src: ./pages/bestpratices.md
 ---
 
 ---
@@ -51,5 +59,5 @@ src: ./pages/interactive.md
 ---
 
 ---
-src: ./pages/7endcard.md
+src: ./pages/endcardAnime.md
 ---

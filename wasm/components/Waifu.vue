@@ -1,32 +1,5 @@
 <template>
-  <!-- 使用示例 -->
   <div>
-    <div>
-      <p>style：{{ style }}</p>
-      <button v-text="'Left Top'" @click="style = LeftTop" />
-      <button v-text="'Left Bot'" @click="style = LeftBot" />
-      <button v-text="'Right Top'" @click="style = RighTop" />
-      <button v-text="'Right Bot'" @click="style = RighBot" />
-      <button v-text="'At Center'" @click="style = AtCentr" />
-      <button v-text="'Unset'" @click="style = Unset" />
-    </div>
-    <div>
-      <p>isLeft：{{ isLeft }}</p>
-      <button @click="isLeft = false">Right</button>
-      <button @click="isLeft = true">Left</button>
-    </div>
-    <div>
-      <p>resolution：</p>
-      <input type="number" v-model.lazy="resolution" />
-    </div>
-    <div>
-      <p>width：</p>
-      <input type="number" v-model.lazy="width" />
-    </div>
-    <div>
-      <p>height：</p>
-      <input type="number" v-model.lazy="height" />
-    </div>
     <live2d
       class="live2d"
       v-model:width="width"
@@ -63,9 +36,9 @@ const AtCentr = computed(() => {
 });
 
 let isLeft = ref(false);
-let style = ref<any>(RighBot);
+let style = ref<any>(AtCentr);
 let width = ref(500);
-let height = ref(600);
+let height = ref(500);
 let resolution = ref(3);
 let tips = ref({
   mouseover: [

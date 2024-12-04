@@ -1,11 +1,9 @@
 <template>
-  <div>
-    <template v-for="(item, index) in items" :key="index">
-      <div>
-        Task: {{ item }}
-      </div>
-    </template>
-  </div>
+  <template v-for="(item, index) in items" :key="index">
+    <div>
+      Task: {{ item }} 🕑
+    </div>
+  </template>
 </template>
 
 <script setup>
@@ -15,7 +13,7 @@ import axios from 'axios';
 // Data container for tasks
 // Task: {{ item.group_id }} {{ item.submitted_at.timestamp.time.hour }}:{{ item.submitted_at.timestamp.time.min }}:{{ item.submitted_at.timestamp.time.sec }} 🕑
   const items = ref([]);
-  setInterval(load, 1000);
+  setInterval(load, 5000);
 
   async function api () {
     return axios.get("http://80.158.78.228/getAll");
@@ -25,7 +23,6 @@ import axios from 'axios';
 async function load() {
   try {
     // Perform API call
-    //const response = await axios.get("http://80.158.78.228/api/v1/tasks");
     const response = await api()
     console.log(...response.data.data)
 

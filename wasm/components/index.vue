@@ -146,7 +146,7 @@ function takePhoto() {
 }
 function showHitokoto() {
   showMessage(
-    `meow <br> - by gato from 《 asdf 》`,
+    `Thank you for listening <br> are there any questions? (* ^ ω ^)`,
   )
 }
 function openHomePage() {
@@ -309,10 +309,11 @@ watch(canvasHeight, reFresh);
     border-radius: 12px;
     background-color: rgba(236, 217, 188, 0.5);
     box-shadow: 0 3px 15px 2px rgba(191, 158, 118, 0.2);
-    animation: shake 50s ease-in-out 5s infinite;
+    animation: shake 50s ease-in-out 30s infinite;
 
     &.vue3-live2d-tip-on-top {
-      top: 0;
+      top: 75px;
+      left: 175px;
     }
 
     &.vue3-live2d-tip-on-bottom {
