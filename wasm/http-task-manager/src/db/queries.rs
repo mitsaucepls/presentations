@@ -1,6 +1,8 @@
 /// SQL Query for retrieving all current tasks tasks
 pub(crate) const GET_TASKS: &str = "SELECT * FROM tasks OFFSET $1 LIMIT $2;";
 
+pub(crate) const GET_ALL_TASKS: &str = "SELECT * FROM tasks;";
+
 /// SQL Query for retrieving all current tasks by group ID
 pub(crate) const GET_TASKS_BY_GROUP_ID: &str =
     "SELECT * FROM tasks WHERE group_id = $1 OFFSET $2 LIMIT $3;";

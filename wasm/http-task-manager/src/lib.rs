@@ -50,10 +50,8 @@ use bindings::wasi::http::types::{
 };
 use bindings::wasi::logging::logging::{log, Level};
 use bindings::wasmcloud::postgres::query::query;
-use bindings::wasmcloud::postgres::types::PgValue;
-use bindings::wasmcloud::task_manager::types::{
-    JsonString, Task, TaskId, TaskStatus, WorkerId,
-};
+use bindings::wasmcloud::postgres::types::{PgValue, ResultRowEntry};
+use bindings::wasmcloud::task_manager::types::{JsonString, Task, TaskId, TaskStatus, WorkerId};
 
 use crate::tasks::{
     GetTaskError, GetTasksError, GetTasksQueryOptions, LeaseId, OffsetPagination, SubmitTaskError,
@@ -143,9 +141,8 @@ impl incoming_handler::Guest for HttpTaskManager {
             // Post a random task into the database
             (Method::Get, "/random") => {
                 let tasks = vec![
-                    "write", "read", "code", "debug", "test", "deploy",
-                    "design", "analyze", "research", "organize", "clean",
-                    "review", "build", "plan", "edit", "compile",
+                    "write", "read", "code", "debug", "test", "deploy", "design", "analyze",
+                    "research", "organize", "clean", "review", "build", "plan", "edit", "compile",
                 ];
 
                 let mut rng = rand::thread_rng();
@@ -177,6 +174,31 @@ impl incoming_handler::Guest for HttpTaskManager {
                         );
                     }
                 }
+            }
+
+            (Method::Get, "/getAll") => {
+                let tasks = match <Self as tasks::Guest>::get_all_tasks() {
+                    Ok(ts) => ts,
+                    Err(e) => {
+                        try_send_error!(
+                            LOG_CONTEXT,
+                            500,
+                            "task-retrieval-failure",
+                            &format!("failed to retrieve tasks: {e}"),
+                            response_out
+                        );
+                        return;
+                    }
+                };
+
+                send_response_json(
+                    response_out,
+                    json!({
+                        "status": "success",
+                        "data": tasks,
+                    }),
+                    200,
+                );
             }
 
             // GET /api/v1/tasks
@@ -631,7 +653,6 @@ impl tasks::Guest for HttpTaskManager {
                 }
             }
         };
-
         // Convert all DB rows to tasks
         let tasks = rows
             .iter()
@@ -642,6 +663,42 @@ impl tasks::Guest for HttpTaskManager {
             .collect::<Result<Vec<Task>, GetTasksError>>()?;
 
         Ok(tasks)
+    }
+
+    fn get_all_tasks() -> Result<Vec<String>, GetTasksError> {
+        let rows = match query(db::queries::GET_ALL_TASKS, &[]) {
+            Ok(rows) => rows,
+            Err(e) => {
+                log(
+                    Level::Error,
+                    LOG_CONTEXT,
+                    &format!("error querying tasks: {e}"),
+                );
+                return Err(GetTasksError::Unexpected(format!(
+                    "failed to query tasks: {e}"
+                )));
+            }
+        };
+
+        // Convert all DB rows to tasks
+        log(Level::Info, LOG_CONTEXT, "Hellowo");
+        match rows.iter().flat_map(|row| row.iter())
+            .filter_map(|entry| {
+                if entry.column_name == "group_id" {
+                    if let PgValue::Text(s) = &entry.value {
+                        Some(s.to_string())
+                    } else {
+                        None
+                    }
+                } else {
+                    None
+                }
+            })
+            .collect::<Vec<String>>()
+        {
+            vec if !vec.is_empty() => Ok(vec),
+            _ => Err(GetTasksError::Unexpected(format!("failed to query tasks"))),
+        }
     }
 
     fn get_task(task_id: TaskId) -> Result<Task, GetTaskError> {

@@ -36,6 +36,8 @@ interface tasks {
     options: get-tasks-query-options,
   ) -> result<list<task>, get-tasks-error>;
 
+  get-all-tasks: func() -> result<list<string>, get-tasks-error>;
+
   /// Get a single task under a given group ID
   get-task: func(
     task-id: task-id
