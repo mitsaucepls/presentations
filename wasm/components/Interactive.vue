@@ -1,8 +1,8 @@
 <template>
-  <div :height=350 :items="items">
+  <div>
     <template v-for="(item, index) in items" :key="index">
-      <div :class="['pa-2', index % 2 === 0 ? 'bg-grey-lighten-2' : '']">
-        Task: {{ item.group_id }} {{ item.submitted_at.timestamp.time.hour }}:{{ item.submitted_at.timestamp.time.min }}:{{ item.submitted_at.timestamp.time.sec }} 🕑
+      <div>
+        Task: {{ item }}
       </div>
     </template>
   </div>
@@ -13,11 +13,12 @@ import { ref } from 'vue';
 import axios from 'axios';
 
 // Data container for tasks
+// Task: {{ item.group_id }} {{ item.submitted_at.timestamp.time.hour }}:{{ item.submitted_at.timestamp.time.min }}:{{ item.submitted_at.timestamp.time.sec }} 🕑
   const items = ref([]);
   setInterval(load, 1000);
 
   async function api () {
-    return axios.get("http://80.158.78.228/api/v1/tasks");
+    return axios.get("http://80.158.78.228/getAll");
   }
 
 // Infinite scroll loader function
