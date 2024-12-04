@@ -50,7 +50,7 @@ use bindings::wasi::http::types::{
 };
 use bindings::wasi::logging::logging::{log, Level};
 use bindings::wasmcloud::postgres::query::query;
-use bindings::wasmcloud::postgres::types::{PgValue, ResultRowEntry};
+use bindings::wasmcloud::postgres::types::{PgValue, Timestamp, TimestampTz};
 use bindings::wasmcloud::task_manager::types::{JsonString, Task, TaskId, TaskStatus, WorkerId};
 
 use crate::tasks::{
@@ -682,14 +682,35 @@ impl tasks::Guest for HttpTaskManager {
 
         // Convert all DB rows to tasks
         log(Level::Info, LOG_CONTEXT, "Hellowo");
-        match rows.iter().flat_map(|row| row.iter())
+        match rows
+            .iter()
+            .flat_map(|row| row.iter())
             .filter_map(|entry| {
                 if entry.column_name == "group_id" {
                     if let PgValue::Text(s) = &entry.value {
                         Some(s.to_string())
                     } else {
+                        return None;
+                    }
+                } else if entry.column_name == "submitted_at" {
+                    if let PgValue::TimestampTz(TimestampTz {
+                        timestamp: Timestamp { time, .. },
+                        ..
+                    }) = &entry.value
+                    {
+                        Some(format!("{:02}:{:02}:{:02}", time.hour, time.min, time.sec))
+                    } else {
                         None
                     }
+                } else {
+                    None
+                }
+            })
+            .collect::<Vec<String>>()
+            .chunks(2)
+            .filter_map(|chunk| {
+                if chunk.len() == 2 {
+                    Some(format!("{} {}", chunk[0], chunk[1]))
                 } else {
                     None
                 }
