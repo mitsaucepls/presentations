@@ -8,14 +8,16 @@
         <p><strong>Was Schlecht</strong></p>
         <ul>
           <li>China</li>
-          <li>React Native Grenzen</li>
+          <li>Live 2D Widget</li>
+          <li>Webview</li>
         </ul>
       </div>
       <div>
         <p><strong>Was Gut</strong></p>
         <ul>
-          <li>Die Scheisse Geht | ES GEEEHT</li>
-          <li></li>
+          <li>AI integration</li>
+          <li>Spaß</li>
+          <li>Live 2D kennengelernt</li>
         </ul>
       </div>
     </div>
