@@ -1,6 +1,6 @@
 ---
 theme: seriph
-background: real-penger.jpg
+background: disisses.gif
 # title: Some random title
 # info: |
 #  Idk bro
