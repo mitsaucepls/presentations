@@ -32,7 +32,7 @@ const starsContainer = ref<HTMLElement|null>(null)
 const flashContainer = ref<HTMLElement|null>(null)
 
 const nav = useNav()
-const {$slidev} = useSlideContext()
+const {$slidev, $page} = useSlideContext()
 
 
 onMounted(() => {
@@ -105,6 +105,7 @@ watch(jump, async (isOn) => {
       opacity: 0,
       duration: 0.3,
       onStart: () => {
+        window.open('http://localhost', '_blank')
         nav.nextSlide()
       },
       onComplete: () => {
@@ -118,7 +119,7 @@ watch(jump, async (isOn) => {
 watch(
   () => nav.clicks.value,
   (clickCount) => {
-    if (clickCount === $slidev.nav.clicksTotal) {
+    if (clickCount === $slidev.nav.clicksTotal && $slidev.nav.currentSlideNo === $page.value) {
       if ($slidev.nav.clicksDirection === -1) {
         $slidev.nav.prev()
         return
@@ -147,7 +148,7 @@ watch(
   left: 50%;
   width: 1px;
   height: 20px;
-  background: white;
+  background: black;
   will-change: transform, opacity;
 }
 .flash {
